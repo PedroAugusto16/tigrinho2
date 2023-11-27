@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bola</title>
+</head>
+<style>
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #borda {
+        width: 500px;
+        height: 500px;
+        border: 2px solid rgb(0, 0, 0);
+        position: relative;
+        overflow: hidden;
+    }
+
+    #bola1 {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 2px solid rgb(0, 0, 0);
+        top: 10%;
+        left: 20%;
+        position: absolute;
+        background-color: crimson;
+    }
+    
+    #bola2 {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 2px solid rgb(0, 0, 0);
+        top: 45%;
+        left: 20%;
+        position: absolute;
+        background-color: rgb(37, 220, 20);
+    }
+    
+    #bola3 {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 2px solid rgb(0, 0, 0);
+        top: 80%;
+        left: 20%;
+        position: absolute;
+        background-color: rgb(220, 207, 20);
+    }
+
+
+    .movimento {
+        animation: correr 0.4s linear  ;
+    }
+
+    @keyframes correr {
+        0% {
+            top: 20%;
+        }
+
+        10% {
+            top: 5%;
+        }
+
+        50% {
+            top: 50%;
+           
+        }
+
+        100% {
+            top: 100%;
+           
+        }
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div id="borda">
+            <div id="bola1"></div>
+            <div id="bola2"></div>
+            <div id="bola3"></div>
+        </div>
+        <br>
+    </div>
+    <button onclick="iniciar()">Iniciar</button>
+
+    <script>
+        function iniciar() {
+            let bola1 = document.getElementById('bola1')
+            let bola2 = document.getElementById('bola2')
+            let bola3 = document.getElementById('bola3')
+            bola1.classList.add('movimento')
+            bola2.classList.add('movimento')
+            bola3.classList.add('movimento')
+        }
+    </script>
+
+</body>
+
+</html>
